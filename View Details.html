@@ -1,0 +1,112 @@
+<!--This html page is only display the information provided in Home.html file-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>View Details</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="bootstrap/jquery-ui.min.js"></script>
+    <script src="bootstrap/viewDetails.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <h2>PERSONAL BOOK</h2>
+        <h4>Your Personal Information</h4>
+
+<!--Form for entering data-->
+        <form class="form-horizontal" action="#" method="get">
+            <div class="form-group">
+
+ <!--fieldset for personal Information-->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <label for="fName" class=" col-form-label"> First Name :</label>
+                            </div>
+                            <div class="row">
+                                <label for="lName" class=" col-form-label"> Last Name :</label>
+                            </div>
+                            <div class="row">
+                                <label for="email" class=" col-form-label">  Email :</label>
+                            </div>
+                            <div class="row">
+                                <label for="phoneNumber" class=" col-form-label"> Phone Number :</label>
+                            </div>
+                            <div class="row">
+                                <label for="gender" class=" col-form-label"> Gender :</label>
+                            </div>
+                            <div class="row">
+                                <label for="dob" class=" col-form-label"> Date of Birth :</label>
+                            </div>
+                            <div class="row">
+                                <label for="age" class=" col-form-label"> Age :</label>
+                            </div>
+                        </div>
+                        <div class="col-sm-4" id="personalInfo">
+
+                        </div>
+
+                        <div class="col-sm-4" id="image">
+
+                        </div>
+                    </div>
+
+<!--fieldset for family Details-->
+                </fieldset>
+
+                <fieldset>
+                    <legend>Family Details</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <label for="fatherName" class=" col-form-label"> Father's Name :</label>
+                            </div>
+                            <div class="row">
+                                <label for="motherName" class=" col-form-label"> Mother's Name :</label>
+                            </div>
+                            <div class="row">
+                                <label for="maritalStatus" class=" col-form-label"> Marital Status :</label>
+                            </div>
+                            <div class="row">
+                                <label id="spouseLabel" for="email" class=" col-form-label">  Spouse Name:</label>
+                            </div>
+                        </div>
+
+                        <div class="col-sm-4" id="familyInfo">
+
+                        </div>
+
+                    </div>
+                </fieldset>
+
+<!--fieldset for Professional Details-->
+                <fieldset>
+                    <legend>Professional Details</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <div class="row">
+                                <label for="companyName" class=" col-form-label"> Company Name : </label>
+                            </div>
+                            <div class="row">
+                                <label for="designation" class=" col-form-label"> Designation : </label>
+                            </div>
+
+                        </div>
+                        <div class="col-sm-4" id="professionalInfo">
+
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

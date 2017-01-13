@@ -1,0 +1,193 @@
+<!--This is the starting page of the aplication PersonalBook. 
+Here the user can enter there personal details and submit the form.
+The form submission leads to View Details.html file-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Book</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="bootstrap/jquery-ui.min.js"></script>
+    <script src="bootstrap/personalBook.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <h2 align:center>PERSONAL BOOK</h2>
+        <h4>Please Fill the Form</h4>
+
+ <!--Form for entering data-->
+        <form class="form-horizontal" action="" method="post" id="register-form" novalidate="novalidate">
+            <div class="form-group">
+
+<!--fieldset for personal Information-->
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="fName" class=" col-form-label"> Enter First Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="fName" name="fName" placeholder="First Name" max="50" autofocus required>
+                        </div>
+                        <div class="col-sm-4" id="validatefName"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="lName" class=" col-form-label"> Enter Last Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="lName" name="lName" placeholder="Last Name" max="50" required>
+                        </div>
+                        <div class="col-sm-4" id="validatelName"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="email" class=" col-form-label"> Enter Email Id :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="email" id="email" name="email" placeholder="Email" max="100" required>
+                        </div>
+                        <div class="col-sm-4" id="validateEmail"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="phoneNumber" class=" col-form-label"> Enter Phone Number :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="number" id="phoneNumber" name="phoneNumber" placeholder="Phone Number" min="10" max="20" required>
+                        </div>
+                        <div class="col-sm-4" id="validateEmail"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="gender" class=" col-form-label"> Gender :</label>
+                        </div>
+                        <div class="col-sm-4 ">
+                            <input id="radio" class="radio-inline" type="radio" name="gender" value="Male" checked> Male
+                            <input id="radio" class="radio-inline" type="radio" name="gender" value="Female"> Female<br>
+                        </div><br><br>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="dob" class=" col-form-label"> Date Of Birth :</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type='date' id="datepicker" name='dob' placeholder='Date of birth' required>
+                        </div>
+                        <div class="col-sm-4" id="validateDob"><br><br>
+                        </div>
+                    </div>
+                     <div class="row">
+                        <div class="col-sm-4">
+                            <label for="image" class=" col-form-label"> Select Image :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="file" id="image" name="image">
+                        </div>
+                        <div class="col-sm-4" id="validateImage"><br><br>
+                        </div>
+                    </div>
+                   
+                </fieldset>
+
+<!--fieldset for family Details-->
+                <fieldset>
+                    <legend>Family Details</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="fatherName" class=" col-form-label"> Enter Father's Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="fatherName" name="fatherName" placeholder="Father's Name" max="50" required>
+                        </div>
+                        <div class="col-sm-4" id="validatefatherName"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="motherName" class=" col-form-label"> Enter Mother's Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="motherName" name="motherName" placeholder="Mother's Name" max="50" required>
+                        </div>
+                        <div class="col-sm-4" id="validatelmotherName"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                    <div class="col-sm-4">
+                        <label for="maritalStatus" class=" col-form-label"> Marital Status :</label>
+                    </div>
+                    <div class="col-sm-4">
+                        <select class="form-control" name="maritalStatus" id="maritalStatus">
+                            <option value="Single">Single</option>
+                            <option value="Married">Married</option>                            
+                        </select>
+                    </div><br><br>
+                </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="email" class=" col-form-label" id="spouseLabel"> Enter Spouse Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="spouseName" name="spouseName" placeholder="Spouse Name" max="50" >
+                        </div>
+                        <div class="col-sm-4" id="validateSpouseName"><br><br>
+                        </div>
+                    </div>                   
+                </fieldset>
+
+<!--fieldset for Professional Details-->
+                <fieldset>
+                    <legend>Professional Details</legend>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="companyName" class=" col-form-label"> Company Name :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="companyName" name="companyName" placeholder="Company Name" max="50" required>
+                        </div>
+                        <div class="col-sm-4" id="validatecompanyName"><br><br>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <label for="designation" class=" col-form-label"> Designation :*</label>
+                        </div>
+                        <div class="col-sm-4">
+                            <input class="form-control" type="text" id="designation" name="designation" placeholder="Designation" max="50" required>
+                        </div>
+                        <div class="col-sm-4" id="validateDesignation"><br><br>
+                        </div>
+                    </div>
+                   
+                           
+                </fieldset>
+
+                <div class="row">
+                    <div class="col-sm-8">
+                        <p align="center">
+                              <input class="btn btn-primary" type='button' value='Submit' id='save'>
+                              <input class="btn btn-danger" type='reset' value='Cancel'>
+                        </p>
+                    </div><br><br>
+                </div>
+
+            </div>
+        </form>
+    </div>
+
+
+</body>
+
+</html>
